@@ -1,0 +1,7 @@
+# Biblioteki standardowe Pythona (wbudowane)
+tkinter
+random
+time
+
+# Minimalna wersja Pythona
+python >=3.10
