@@ -60,10 +60,11 @@ class QuizApp:
         self.restart_button = tk.Button(root, text="Od nowa", command=self.restart_quiz)
         self.restart_button.pack(pady=5)
 
-        self.end_button = tk.Button(root, text="Zakończ quiz", command=self.end_quiz)
+        self.end_button = tk.Button(root, text="Sprawdź wynik (skończysz quiz)", command=self.end_quiz)
         self.end_button.pack(pady=10)
 
         self.show_question()
+        self.update_buttons()
         self.update_timer()
 
     def show_question(self):
@@ -127,23 +128,32 @@ class QuizApp:
             self.score += 1
 
         # Wyświetlenie poprawnych odpowiedzi:
+        # Wyświetlenie poprawnych odpowiedzi w nowej linii:
         correct_answers = [self.current_options[i] for i in self.correct_indices]
-        self.correct_label.config(text="Poprawne odpowiedzi: " + ", ".join(correct_answers))
+        answers_text = "Poprawne odpowiedzi:\n" + "\n".join(f"- {ans}" for ans in correct_answers)
+        self.correct_label.config(text=answers_text, justify="left")
 
         self.update_buttons(after_check=True)
 
     def update_buttons(self, after_check=False):
+        # Przycisk cofania działa, jeśli nie jesteśmy na pierwszym pytaniu
         if self.current_q == 0:
             self.back_button.config(state=tk.DISABLED)
         else:
             self.back_button.config(state=tk.NORMAL)
 
-        if after_check:
-            self.check_button.config(state=tk.DISABLED)
+        # Przycisk dalej działa zawsze, jeśli nie jesteśmy na ostatnim pytaniu
+        if self.current_q < len(questions) - 1:
             self.next_button.config(state=tk.NORMAL)
         else:
-            self.check_button.config(state=tk.NORMAL)
             self.next_button.config(state=tk.DISABLED)
+
+        # "Sprawdź" pozostaje dostępny zawsze, dopóki pytanie nie zostało sprawdzone
+        if self.checked_questions[self.current_q]:
+            self.check_button.config(state=tk.DISABLED)
+        else:
+            self.check_button.config(state=tk.NORMAL)
+
 
     def next_question(self):
         if self.current_q < len(questions) - 1:
@@ -206,9 +216,8 @@ class QuizApp:
         # Przywracamy aktywność przycisków
         self.back_button.config(state=tk.DISABLED)
         self.check_button.config(state=tk.NORMAL)
-        self.next_button.config(state=tk.DISABLED)
         self.end_button.config(state=tk.NORMAL)
-
+        self.update_buttons()
         self.update_timer()
 
 
