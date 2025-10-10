@@ -1,3 +1,5 @@
+# OBRAZKI
+
 # Quiz Wielokrotnego Wyboru - Python Tkinter
 
 Prosty quiz wielokrotnego wyboru napisany w Pythonie z wykorzystaniem biblioteki Tkinter.  
