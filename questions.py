@@ -107,6 +107,11 @@ questions = [
         "options": ["prawda", "fałsz"],
         "correct": [1]
     },
+     {
+        "question": "Elementem światłoczułym oka jest:",
+        "options": ["rogówka", "teczówka", "siatkówka", "źrenica"],
+        "correct": [2]
+    },
     {
         "question": "Wyznaczono dwuwymiarową transformatę Fouriera obrazu. Gdzie będą znajdowały się niskie częstotliwości F-obrazu (po transformacji optycznej)?",
         "options": ["jest to zależne od obrazu", "na krawędziach F-obrazu", "w centrum F-obrazu", "w rogach F-obrazu"],
@@ -241,7 +246,7 @@ questions = [
         "correct": [2]
     },
     {
-        "question": "Filtracja medianowa wybiera wartość z otoczenia bez wprowadzania nowych wartości:",
+        "question": "W przeciwienstwie do filtracji liniowej (dolnoprzepustowej), przy filtracji medianowej jako nowy piksel wybierana jest któraś wartość z otoczenia (tj. nie ma mozliwości pojaiwneia sie jasności/koloru który nie występuje w oryginalnym)",
         "options": ["prawda", "fałsz"],
         "correct": [0]
     },
@@ -275,7 +280,96 @@ questions = [
         "[1 0 -1; 2 0 -2; 1 0 -1]"
     ],
     "correct": [1]
-}
+    },
+    #kolos1a 2016
+    {
+        "question": "Czy charakterystyka spektralna czujnika CCD i czułość spektralna ludzkiego oka są:",
+        "options": [
+            "takie same",
+            "oko ludzkie obejmuje szerszy zakres niz CCD",
+            "CCD obejmuje szerszy zakres niż oko ludzkie",
+            "maksymalna czułość CCD jest przesunięta w stronę nadfioletu",
+            "maksymalna czułość CCD jest przesunięta w stronę podczerwieni"
+        ],
+        "correct": [2,4]
+    },{
+        "question": "Plamka żółta w oku to",
+        "options": [
+            "miejsce o największym skupieniu czopków",
+            "ujście nerwu wzrokowego"
+        ],
+        "correct": [0]
+    },{
+        "question": "Dla kombinacji liniowej dwóch obrazów monochromatycznych:",
+        "options": [
+            "należy bezwzględnie dokonać normalizacji obrazu wyjściowego",
+            "nomrlaizacja obrazu wyjściowego nie jest potrzebna",
+            "należy wykonać normalizację obrazu wyjściowego, jeżeli jest to niezbędne (zależy od współczynników kombinacji)",
+            " zapobiec sytuacji, w której nastąpi ewentualne dzielenie przez zero za pomocą przekształcenia log(I(x,y)+1), np. drugi obraz ma punkt o wartości zero dla ustalonych współrzędnych (x,y)"
+        ],
+        "correct": [2,3]
+    },{
+        "question": " Często obraz kolorowy jest kodowany za pomocą 32 bitów. Wówczas 24 bity stosuje się na zakodowanie składowych punktu oraz dodatkowo 8 bitów w celu",
+        "options": ["zapisania nasycenia barwy czerwonej", 
+                    "zapisania nasycenia barwy zielonej",
+                    "zapisania nasycenia barwy niebieskiej",
+                    "zwiększenia wydajności operowania na obrazie"
+                    ],
+        "correct": [3]
+    },{
+        "question": " Z wymienionych poniżej, wskaż przestrzenie barw, w których wyróżnia się osobną składową jasności obrazu",
+        "options": ["RGB", "YUV", "CMY", "HSV", "CMYK"],
+        "correct": [1,3]
+    },{
+        "question": "Zaznacz prawidłowe zdanie(a) dotyczące interpolacji obrazów barwnych",
+        "options": ["niezbędne jest wykonanie interpolacji najbliższego sąsiada dla każdego kanału oddzielnie", 
+                    "interpolacje najbliższego sąsiada wystarczy wykonac dla pojedynczego kanału", 
+                    "niezbędne jest wykonanie interpolacji liniowej dla każdego kanału oddzielnie", 
+                    "interpolacje liniową wystarczy wykonac dla pojedynczego kanału"
+                    ],
+        "correct": [0,2]
+    },{
+        "question": "Który z filtrów górnoprzepustowych zachowuje informację o kierunku zmiany pochodnej (gradientu) na obrazie:",
+        "options": ["filtr Prewitta", "filtr Sobela", "filtr adaptacyjny", "filtr Laplace'a (laplsjan)"],
+                  
+        "correct": [0,1]
+    },{
+        "question": "Czy przyjmując rozmiar okna globalnego równy rozmiarowi okna lokalnego, filtr NL-means (non-local means) sprowadza się do filtra bilateralnego?",
+        "options": [
+            "tak",
+            "nie"
+        ],
+        "correct": [1]
+    },{
+        "question": "Filtr NL-means (non-local means) jest filtrem (zaznacz poprawne stwierdzenie lub stwierdzenia):",
+        "options": [
+            "liniowym",
+            "nieliniowym",
+            "rekurencyjnym"
+           
+        ],
+        "correct": [1]
+    },{
+        "question": "Wskaż poprawne zdania o algorytmach binaryzacji poznanych na zajęciach:",
+        "options": [
+            "metoda Otsu wymaga podania dwoch progów T1 i T2",
+            "w metodzie Sauvola próg binaryzacji wyznaczony jest na podstawie otoczenia analizowanego piksela",
+            "w doborze progu binaryzacji największe znaczenie ma analiza histogramu",
+            "do segmentacji obrazu o niejednorodnym oświetleniu najlepiej nadaje sie ktoras z metod globalnych"
+           
+        ],
+        "correct": [1,2]
+    },{
+        "question": "Która (-e) z masek opisuja filtry kierunkowe?",
+        "options": [
+            "[0,-1,0] [-1,4,-1] [0,-1,0]",
+            "[1,1,1] [1,-2,1] [-1,-1,-1]",
+            "[1,1,1] [1,-2,-1] [1,-1,-1]",
+            "[1,2,1] [2,4,2] [1,2,-1]"
+           
+        ],
+        "correct": [1,2]
+    }
 
 
 ]
