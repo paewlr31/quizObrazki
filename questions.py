@@ -369,6 +369,123 @@ questions = [
            
         ],
         "correct": [1,2]
+    },
+    #kolos 1b 2016
+    {
+        "question": "W którym z wymienionych zakresów widznowym czułość sensorów obrazu typu CCD jest największa:",
+        "options": [
+            "ultrafioletu",
+            "widzialnym",
+            "bliskiej podczerwieni (800–1100 nm)",
+            "fal radiowych UKF"
+        ],
+        "correct": [2]
+    },{
+        "question": "Opis: “niska czułość, widzenie przy dobrym oświetleniu, widzenie barwne” odpowiada",
+        "options": [
+            "pręcikom",
+            "czopkom"
+        ],
+        "correct": [1]
+    },{
+        "question": "Ile różnych poziomów jasności może zawierać obraz, którego poziom jasności reprezentowany danym 16-bitowymi?",
+        "options": [
+            "16",
+            "256",
+            "1024",
+            "8096",
+            "65536"
+        ],
+        "correct": [4]
+    },{
+        "question": " Zaznacz prawidłowe odpowiedzi dotyczące modelu CMY/CMYK",
+        "options": [
+            "CMY to model subtraktywny",
+            "Wartość składowej K otrzymujemy przez zależność: K=max(C,M,Y)",
+            "Wartość składowej K otrzymujemy przez zależność: K=min(C,M,Y)",
+            "CMY to model addytywny."
+        ],
+        "correct": [0,2]
+    },{
+        "question": " W jakich sytuacjach metoda najbliższego sąsiada daje lepsze efekty niż interpolacja dwuliniowa:",
+        "options": ["nigdy", 
+                    "w przypadku niektórych naturalnych obrazów, z bogatą paletą odcieni szarości", 
+                    "zawsze", 
+                    "w przypadku niektórych syntetycznych obrazów, z bardzo ograniczoną paletą odcieni szarości"
+                    ],
+        "correct": [3]
+    },{
+        "question": " Czy suma współczynników filtra (elementów maski) po normalizacji może przekraczać wartość 1?",
+        "options": [
+            "tak",
+            "nie",
+            "tak, ale tylko gdy filtr jest usredniajaco-medianowy"
+           
+        ],
+        "correct": [0] 
+    },{
+        "question": "Które z poniższych zakłóceń może być lepiej usunięte przez medianę niż przez filtr uśredniający",
+        "options": [
+            " usunięcie szumu o rozkładzie normalnym (Gaussa)",
+            "niewykorzystanie wszystkich poziomów jasności",
+            "nierównomierne oświetlenie sceny",
+            "usunięcie szumu salt and pepper"
+           
+        ],
+        "correct": [3]
+    },{
+       "question": "Które z zakłóceń (ciemny kształt na jasnym tle) zostanie całkowicie wyeliminowane przez medianę o masce kwadratowej 5x5",
+        "options": [
+            "o rozmiarze 2x4",
+            "o rozmiarze 5x6",
+            "o rozmiarze 3x5",
+            "o rozmiarze 11x2"
+           
+        ],
+        "correct": [0]   
+    },{
+        "question": "Czy można ustawić filtr bilateralny w ten sposób, aby filtrował szum niejednorodny (zmienne natężenie szumu w obrazie)?",
+        "options": ["tak", "nie"],
+        "correct": [0]
+    },{
+        "question": "Zaznacz poprawne stwierdzenia dotyczące filtra NL-means (non-local means):",
+        "options": [
+            "wysoka złożoność obliczeniowa i duża dokładność filtracji",
+            "niska złożoność obliczeniowa i duża dokładność filtracji",
+            "filtr ustala wagi na podstawie podobieństw w jasności punktów w analizowanym oknie z punktem centralnym okna",
+            "do poprawnego działania filtr NL-means wymaga obrazu referencyjnego (na przykład obraz przefiltrowany innym filtrem)" 
+        ], 
+        "correct": [0,2]
+    },{
+        "question": "Metoda lokalnej binaryzacji Sauvoli wykorzystuje jako parametry",
+        "options": [
+            "odchylenie standardowe w oknie",
+            "średnią jasność w oknie",
+            "wartość maksymalną w oknie",
+            "wartość minimalną w oknie",
+            "splot okna z filtrem Gabora"
+           
+        ],
+        "correct": [0,1]
+    },{
+        "question": "Który z niekorzystnych efektów jest niwelowany dzięki zastosowaniu dwuetapowego przetwarzania w filtrze adaptacyjnym przedstawionym na wykładzie:",
+        "options": [
+            "sklejanie zakłóceń w większe grupy niemożliwe do usunięcia",
+            "zmiana gabarytów małych obiektów",
+            "rozjaśnienie obrazu",
+            "rozmywanie punktów krawędziowych"
+           
+        ],
+        "correct": [0]
+    },{
+        "question": "Która z poniższych masek nie jest maską laplasjanową?",
+        "options": [
+            "[0,-1,0] [-1,4,-1] [0,-1,0]",
+            "[-1,-1,-1] [-1,7,-1] [0,-1,-1]",
+           "[-1,-1,-1] [-1,8,-1] [-1,-1,-1]",
+           
+        ],
+        "correct": [2]
     }
 
 
