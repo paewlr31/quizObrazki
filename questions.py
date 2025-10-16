@@ -372,7 +372,7 @@ questions = [
     },
     #kolos 1b 2016
     {
-        "question": "W którym z wymienionych zakresów widznowym czułość sensorów obrazu typu CCD jest największa:",
+        "question": "W którym z wymienionych zakresów widmowym czułość sensorów obrazu typu CCD jest największa:",
         "options": [
             "ultrafioletu",
             "widzialnym",
@@ -422,7 +422,7 @@ questions = [
             "tak, ale tylko gdy filtr jest usredniajaco-medianowy"
            
         ],
-        "correct": [0] 
+        "correct": [1] 
     },{
         "question": "Które z poniższych zakłóceń może być lepiej usunięte przez medianę niż przez filtr uśredniający",
         "options": [
@@ -486,6 +486,16 @@ questions = [
            
         ],
         "correct": [2]
+    },
+    #kolos 2018 a/b
+    {
+        "question": "W przypadku niejednorodnego oświetlenia obrazu dobrze sprawdzają się metody binaryzacji:",
+        "options": [
+            "lokalnej",
+            "globalnej"
+           
+        ],
+        "correct": [0]
     }
 
 
