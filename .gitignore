@@ -1,1 +1,8 @@
-/__pycache__
+# Ignoruj cache Pythona
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignoruj środowiska wirtualne
+venv/
+.env/
