@@ -332,7 +332,7 @@ questions = [
         "question": "Który z filtrów górnoprzepustowych zachowuje informację o kierunku zmiany pochodnej (gradientu) na obrazie:",
         "options": ["filtr Prewitta", "filtr Sobela", "filtr adaptacyjny", "filtr Laplace'a (laplsjan)"],
                   
-        "correct": [0,1]
+        "correct": [0,1,3]
     },{
         "question": "Czy przyjmując rozmiar okna globalnego równy rozmiarowi okna lokalnego, filtr NL-means (non-local means) sprowadza się do filtra bilateralnego?",
         "options": [
@@ -442,7 +442,7 @@ questions = [
             "o rozmiarze 11x2"
            
         ],
-        "correct": [0]   
+        "correct": [0, 3]   
     },{
         "question": "Czy można ustawić filtr bilateralny w ten sposób, aby filtrował szum niejednorodny (zmienne natężenie szumu w obrazie)?",
         "options": ["tak", "nie"],
@@ -476,7 +476,7 @@ questions = [
             "rozmywanie punktów krawędziowych"
            
         ],
-        "correct": [0]
+        "correct": [3]
     },{
         "question": "Która z poniższych masek nie jest maską laplasjanową?",
         "options": [
@@ -485,7 +485,7 @@ questions = [
            "[-1,-1,-1] [-1,8,-1] [-1,-1,-1]",
            
         ],
-        "correct": [2]
+        "correct": [1]
     },
     #kolos 2018 a/b
     {
